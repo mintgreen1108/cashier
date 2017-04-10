@@ -32,9 +32,9 @@ class GoodsModel extends BaseModel
      * @param $merchant_code
      * @return mixed
      */
-    public function getProducts($classId, $merchant_code,$page=1)
+    public function getProducts($classId, $merchant_code, $page = 1, $pageSize = 20)
     {
-        $products = $this->getList(array('class_id' => $classId, 'merchant_code' => $merchant_code), '*', 'id asc', 'array', $page);
+        $products = $this->getList(array('class_id' => $classId, 'merchant_code' => $merchant_code), '*', 'id asc', 'array', $page, $pageSize);
         return $products;
     }
 
@@ -47,7 +47,7 @@ class GoodsModel extends BaseModel
     public function queryProducts($merchant_code, $key)
     {
         $where = "merchant_code=$merchant_code and (goods_name like '%$key%' or simple_word like '%$key%' or goods_code like '%$key%')";
-        $products = $this->getList($where, 'id,goods_name,price', 'id asc');
+        $products = $this->getList($where, 'id,goods_name,price,img_path', 'id asc');
         return $products;
     }
 

@@ -102,7 +102,7 @@ class goods extends BaseController
      */
     public function classDetail()
     {
-        $data = $this->GoodsModel->getProducts($_POST['class_id'], $merchant_code = $this->merchantInfo['merchant_code'], $_POST['page']);
+        $data = $this->GoodsModel->getProducts($_POST['class_id'], $merchant_code = $this->merchantInfo['merchant_code'], $_POST['page'],10);
         $class = array_column($this->GoodsModel->getGoodsClass($merchant_code), null, 'id');
         foreach ($data as $key => $value) {
             $array = $class[$value['class_id']];
@@ -112,7 +112,6 @@ class goods extends BaseController
     }
 
     /**
-     * @author 汤圆
      * @function 上传图片
      * @return bool
      * @throws Exception
@@ -160,7 +159,6 @@ class goods extends BaseController
     }
 
     /**
-     * @author 汤圆
      * @function 添加商品
      */
     public function addGoods()

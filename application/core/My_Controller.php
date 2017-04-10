@@ -78,14 +78,13 @@ class BaseController extends My_Controller{
     }
 
     /**
-     * @author 汤圆
-     * @function 新建会员
+     * @function 返回数据格式
      * @param $result
      * @param string $msg
      * @param array $data
      */
     public function rspsJson($result,$msg='',$data=array()){
-        $data=array('result'=>$result,'msg'=>$msg,'data'=>$data);
+        $data=array('result'=>$result,'msg'=>$msg,'data'=>json_encode($data));
         echo json_encode($data);
         die();
     }

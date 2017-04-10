@@ -17,7 +17,7 @@
             </div><!--/.info-box-->
         </div><!--/.col-->
 
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
                 <i class="fa fa-money"></i>
                 <div class="count"><?php echo empty($today['invoice']['cash_total']['bank']) ? '0' : $today['invoice']['cash_total']['bank']; ?></div>
@@ -25,7 +25,7 @@
             </div><!--/.info-box-->
         </div><!--/.col-->
 
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
                 <i class="fa fa-credit-card"></i>
                 <div class="count"><?php echo empty($today['invoice']['zfb_total']['bank']) ? '0' : $today['invoice']['zfb_total']['bank']; ?></div>

@@ -220,6 +220,8 @@
             classes.getProduct(1);
         },
         getProduct: function (num) {
+
+
             var url = CGloabal.baseUrl + 'admin/goods/classDetail';
             var data = {
                 class_id: $('.bg_selected').children('a').attr('id'),
@@ -303,6 +305,7 @@
             }
         }
     };
+    //显示分页
     $('#inpage').jqPaginator({
         totalPages: $('.bg_selected').children('span').text() / 10 + 1,
         visiblePages: 10,

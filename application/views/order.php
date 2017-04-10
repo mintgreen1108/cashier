@@ -42,7 +42,7 @@
     </div>
     <div class="cart_btn" style="width: 57%">
         <div>
-            <li><p><strong>第<span id="order_no" class="blackfont"></span> 号账单</p></strong></li>
+            <li><strong>第<span id="order_no" class="blackfont"></span> 号账单</strong></li>
             <li id="order_total" class="cartfont">￥0</li>
         </div>
         <div style="float:right;">
