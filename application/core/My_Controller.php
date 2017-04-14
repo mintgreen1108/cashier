@@ -84,7 +84,7 @@ class BaseController extends My_Controller{
      * @param array $data
      */
     public function rspsJson($result,$msg='',$data=array()){
-        $data=array('result'=>$result,'msg'=>$msg,'data'=>json_encode($data));
+        $data=array('result'=>$result,'msg'=>$msg,'data'=>$data);
         echo json_encode($data);
         die();
     }
